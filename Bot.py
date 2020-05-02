@@ -49,16 +49,16 @@ async def cat(ctx):
 # Info command
 @bot.command()
 async def info(ctx):
-    embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
+    embed = discord.Embed(title="Broadcast Chill", description="Broadcast Chill Server Automation Bot", color=0x6441a5)
 
     # give info about you here
-    embed.add_field(name="Author", value="<YOUR-USERNAME>")
+    embed.add_field(name="Author", value="Samuel Kapp")
 
     # Shows the number of servers the bot is member of.
     embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
 
-    # give users a link to invite thsi bot to their server
-    embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+    # give users a link to invite this bot to their server
+    embed.add_field(name="Invite", value="https://discordapp.com/api/oauth2/authorize?client_id=657860244843790336&permissions=8&scope=bot")
 
     await ctx.send(embed=embed)
 
