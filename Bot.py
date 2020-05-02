@@ -1,4 +1,4 @@
-# Broadcast Chill Discord Server Moderation Bot
+# Broadcast Chill Discord Server Automation Bot
 # Written by Samuel Kapp
 # https://github.com/skappDTCC/BroadcastChillDiscordBot
 # https://www.linkedin.com/in/samuel-kapp-2b5130163/
