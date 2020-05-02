@@ -16,7 +16,7 @@ import Token
 # Sets the bots command prefix
 bot = commands.Bot(command_prefix='$')
 
-
+# Bot Information log event upon boot 
 @bot.event
 async def on_ready():
     print('Logged in as')
