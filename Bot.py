@@ -16,7 +16,8 @@ import Token
 # Sets the bots command prefix
 bot = commands.Bot(command_prefix='$')
 
-# Bot Information log event upon boot 
+
+# Bot Information log event upon boot
 @bot.event
 async def on_ready():
     print('Logged in as')
@@ -62,10 +63,13 @@ async def info(ctx):
     await ctx.send(embed=embed)
 
 
+bot.remove_command('help')
+
+
 # help command
 @bot.command()
 async def help(ctx):
-    embed = discord.Embed(title="nice bot", description="A Very Nice bot. List of commands are:", color=0xeee657)
+    embed = discord.Embed(title="Broadcast Chill Bot", description="List of commands:", color=0x6441a5)
 
     embed.add_field(name="$add X Y", value="Gives the addition of **X** and **Y**", inline=False)
     embed.add_field(name="$multiply X Y", value="Gives the multiplication of **X** and **Y**", inline=False)
