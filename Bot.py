@@ -1,3 +1,9 @@
+# Broadcast Chill Discord Server Moderation Bot
+# Written by Samuel Kapp
+# https://github.com/skappDTCC/BroadcastChillDiscordBot
+# https://www.linkedin.com/in/samuel-kapp-2b5130163/
+
+# https://discordpy.readthedocs.io/en/latest/intro.html#basic-concepts
 # https://issuehunt.io/blog/How-to-write-a-Discord-bot-in-Python-5bb1f0e3c556c5005573c508
 
 # Imports the Discord module.
@@ -39,6 +45,7 @@ async def cat(ctx):
     await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
 
 
+# Info command
 @bot.command()
 async def info(ctx):
     embed = discord.Embed(title="nice bot", description="Nicest bot there is ever.", color=0xeee657)
@@ -55,9 +62,7 @@ async def info(ctx):
     await ctx.send(embed=embed)
 
 
-bot.remove_command('help')
-
-
+# help command
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title="nice bot", description="A Very Nice bot. List of commands are:", color=0xeee657)
@@ -71,5 +76,6 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-# Runs the bot under the token string. 
+
+# Runs the bot under the token string.
 bot.run(Token.token)
