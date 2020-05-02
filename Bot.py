@@ -1,10 +1,13 @@
-#https://issuehunt.io/blog/How-to-write-a-Discord-bot-in-Python-5bb1f0e3c556c5005573c508
+# https://issuehunt.io/blog/How-to-write-a-Discord-bot-in-Python-5bb1f0e3c556c5005573c508
 
+# Imports the Discord module.
 import discord
 from discord.ext import commands
 
+# Imports the .py python file containing the private Bot token string.
 import Token
 
+# Sets the bots command prefix
 bot = commands.Bot(command_prefix='$')
 
 
@@ -68,5 +71,5 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
-
+# Runs the bot under the token string. 
 bot.run(Token.token)
