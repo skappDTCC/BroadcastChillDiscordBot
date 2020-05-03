@@ -27,23 +27,8 @@ async def on_ready():
 
 
 @bot.command()
-async def add(ctx, a: int, b: int):
-    await ctx.send(a + b)
-
-
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a * b)
-
-
-@bot.command()
-async def greet(ctx):
-    await ctx.send(":smiley: :wave: Hello, there!")
-
-
-@bot.command()
-async def cat(ctx):
-    await ctx.send("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+async def ping(ctx):
+    await ctx.send("Pong!")
 
 
 # Info command
@@ -58,7 +43,8 @@ async def info(ctx):
     embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
 
     # give users a link to invite this bot to their server
-    embed.add_field(name="Invite", value="https://discordapp.com/api/oauth2/authorize?client_id=657860244843790336&permissions=8&scope=bot")
+    embed.add_field(name="Invite",
+                    value="https://discordapp.com/api/oauth2/authorize?client_id=657860244843790336&permissions=8&scope=bot")
 
     await ctx.send(embed=embed)
 
@@ -71,12 +57,8 @@ bot.remove_command('help')
 async def help(ctx):
     embed = discord.Embed(title="Broadcast Chill Bot", description="List of commands:", color=0x6441a5)
 
-    embed.add_field(name="$add X Y", value="Gives the addition of **X** and **Y**", inline=False)
-    embed.add_field(name="$multiply X Y", value="Gives the multiplication of **X** and **Y**", inline=False)
-    embed.add_field(name="$greet", value="Gives a nice greet message", inline=False)
-    embed.add_field(name="$cat", value="Gives a cute cat gif to lighten up the mood.", inline=False)
-    embed.add_field(name="$info", value="Gives a little info about the bot", inline=False)
-    embed.add_field(name="$help", value="Gives this message", inline=False)
+    embed.add_field(name="$info", value="Gives Information about the bot", inline=False)
+    embed.add_field(name="$help", value="Displays a list of commands", inline=False)
 
     await ctx.send(embed=embed)
 
